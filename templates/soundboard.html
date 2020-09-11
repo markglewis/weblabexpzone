@@ -1,28 +1,30 @@
- <!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
+{% block head %} 
 <title>The Zone Soundboard</title>
 <script>
     function PlaySound(sound) {
-        
         var path = '..\\static\\soundboard\\'
-        var snd = new Audio(path + sound + '.mp3');
+        var snd = new Audio(path + sound);
         snd.play();
     }
 </script>
-</head>
-<body>
-	
-	<button onclick="PlaySound('heyoo')"> Heyo </button>
-	<button onclick="PlaySound('hello_hello')"> Hello Hello</button>
-	<button onclick="PlaySound('hey_man')"> Hey Man</button>
-	<button onclick="PlaySound('what_i_do')"> What I Do</button>
-	<button onclick="PlaySound('lip_smack')"> Lip Smack</button>
-	<button onclick="PlaySound('exsqueeze_me')"> Exsqueeze Me</button>
-	<button onclick="PlaySound('free_eats')"> Free Eats</button>
-	<button onclick="PlaySound('im_on_a_diet')"> Im on a diet</button>
-	<button onclick="PlaySound('it_pays_for_itself')"> It Pays For Itself</button>
-	<button onclick="PlaySound('scream')"> Scream</button>
+{% endblock %}
 
-</body>
-</html> s
+{% block body %}
+<button onclick="PlaySound('heyoo')"> Heyo </button>
+	<button onclick="PlaySound('hello_hello.mp3')"> Hello Hello</button>
+	<button onclick="PlaySound('hey_man.mp3')"> Hey Man</button>
+	<button onclick="PlaySound('what_i_do.mp3')"> What I Do</button>
+	<button onclick="PlaySound('lip_smack.mp3')"> Lip Smack</button>
+	<button onclick="PlaySound('exsqueeze_me.mp3')"> Exsqueeze Me</button>
+	<button onclick="PlaySound('free_eats.mp3')"> Free Eats</button>
+	<button onclick="PlaySound('im_on_a_diet.mp3')"> Im on a diet</button>
+	<button onclick="PlaySound('it_pays_for_itself.mp3')"> It Pays For Itself</button>
+	<button onclick="PlaySound('scream2.mp3')"> Scream</button>
+	<button onclick="PlaySound('get_some_water.m4a')"> Getting Water</button>
+	<button onclick="PlaySound('hmmhm.m4a')"> hmmhm</button>
+	<button onclick="PlaySound('loud_nope.m4a')"> nope</button>
+	<button onclick="PlaySound('ok.m4a')"> ok</button>
+	<button onclick="PlaySound('yup.m4a')"> yup</button>
+	<button onclick="PlaySound('quiet_ahhh.m4a')"> ahhh</button>
+{% endblock %}

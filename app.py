@@ -13,6 +13,18 @@ def page_not_found(e):
 def index():
 	return render_template("index.html")
 
+@app.route('/blog', methods=['GET', 'POST'])
+def blog():
+	return render_template('blog.html')
+
+@app.route('/todo', methods=['GET', 'POST'])
+def todo():
+	return render_template('todo.html')
+
 @app.route('/soundboard', methods=['GET', 'POST'])
 def soundboard():
 	return render_template('soundboard.html')
+
+@app.route('/lipsmack', methods=['GET', 'POST'])
+def lipsmack():
+	return render_template('lipsmack.html')

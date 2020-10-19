@@ -10,16 +10,16 @@
       <div class="dropdown">
         <button class="dropbtn">About</button>
         <div class="dropdown-content">
-            <a onclick="show_me()"> Me </a>
-            <a onclick="show_read_me()"> This Website</a>
+            <a href="{{ url_for('blog') }}">Me</a>
+            <a href="{{ url_for('blog') }}">This Website</a>
         </div>
       </div>
       <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
+        <button class="dropbtn">Latest</button>
         <div class="dropdown-content">
             <a href="{{ url_for('soundboard') }}">Sound Board</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="{{ url_for('lipsmack') }}">Lip Smack</a>
+            <a href="{{ url_for('myage') }}">My Age</a>
         </div>
       </div>
   </div>

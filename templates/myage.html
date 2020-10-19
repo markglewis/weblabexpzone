@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %} 
+
+{% endblock %}
+
+{% block body %}
+<p>I often forget my age. So thats what this page is for.</p>
+
+<p id="age"></p>
+
+
+
+<script> 
+	var date1 = new Date("01/14/1996"); 
+	var date2 = new Date(); 
+	var Difference_In_Time = date2.getTime() - date1.getTime(); 
+
+	// To calculate the no. of days between two dates 
+	var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+	var Difference_In_Years = Math.floor(Difference_In_Days / 365);
+
+	document.getElementById("age").innerHTML = Difference_In_Years;
+</script> 
+
+{% endblock %}

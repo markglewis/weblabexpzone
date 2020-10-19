@@ -28,3 +28,11 @@ def soundboard():
 @app.route('/lipsmack', methods=['GET', 'POST'])
 def lipsmack():
 	return render_template('lipsmack.html')
+
+@app.route('/musictest', methods=['GET', 'POST'])
+def musictest():
+	return render_template('musictest.html')
+
+@app.route('/myage', methods=['GET', 'POST'])
+def myage():
+	return render_template('myage.html')

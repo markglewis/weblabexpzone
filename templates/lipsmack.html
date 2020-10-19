@@ -5,6 +5,20 @@
 
 {% block body %}
 <p>Smack Those Lips Mark</p>
+
+
 <button onclick="LipSmack()"> Smack </button>
-<p>Smackeroos = 1</p>
+<p>Smackeroos: <p id="clicks">0</p></p>
+
+
+<script type="text/javascript">
+    var clicks = parseInt(document.getElementById("clicks").innerHTML);
+    function LipSmack(){
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+        var snd = new Audio('..\\static\\lipsmack\\lip_smack.mp3');
+        snd.play();
+    };
+    </script>
+
 {% endblock %}
